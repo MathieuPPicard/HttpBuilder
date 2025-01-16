@@ -1,11 +1,9 @@
 package theVaultHunter0.Header;
 
-import theVaultHunter0.Header.Section.CustomHeader;
-import theVaultHunter0.Header.Section.EntityHeader;
-import theVaultHunter0.Header.Section.GeneralHeader;
-import theVaultHunter0.Header.Section.SecurityHeader;
+import theVaultHunter0.Header.Section.*;
 
 import java.lang.reflect.Field;
+import java.util.Map;
 
 public class Header {
 
@@ -13,12 +11,21 @@ public class Header {
     private EntityHeader entityHeader;
     private SecurityHeader securityHeader;
     private CustomHeader customHeader;
+    private ResponseSpecific responseHeader;
+    private RequestSpecific requestHeader;
 
     public Header(GeneralHeader generalHeader, EntityHeader entityHeader,
-                  SecurityHeader securityHeader, CustomHeader customHeader) {
+                  SecurityHeader securityHeader, CustomHeader customHeader,
+                  ResponseSpecific responseHeader, RequestSpecific requestHeader) {
         this.generalHeader = generalHeader;
         this.entityHeader = entityHeader;
         this.securityHeader = securityHeader;
+        this.customHeader = customHeader;
+        this.responseHeader = responseHeader;
+        this.requestHeader = requestHeader;
+    }
+
+    public Header(CustomHeader customHeader) {
         this.customHeader = customHeader;
     }
 
@@ -40,6 +47,17 @@ public class Header {
         return result.toString();
     }
 
+    public static Header fromString(Map<String, String> map, boolean isRequest){
+        CustomHeader custom = new CustomHeader(map);
+        if(isRequest)
+        {
+            return new Header(custom);
+        }
+        else{
+            return new Header(custom);
+        }
+    }
+
     public CustomHeader getCustomHeader() {
         return customHeader;
     }
@@ -54,5 +72,13 @@ public class Header {
 
     public GeneralHeader getGeneralHeader() {
         return generalHeader;
+    }
+
+    public ResponseSpecific getResponseHeader() {
+        return responseHeader;
+    }
+
+    public RequestSpecific getRequestHeader() {
+        return requestHeader;
     }
 }
