@@ -5,7 +5,9 @@ A simple Http message builder, to be used into my Http Server.
 - Create request and responses (X)
 - From the Http object create a byte array (X)
 - From the byte array transform it to a String (X)
-- From the String build the Http object to easily access is different part
+- From the String build the Http object to easily access is different part (X)
+
+*When creating a Http object from a string, all the header parameter are in the CustomHeader. This will maybe change...
 
 ## Http Schema
 
