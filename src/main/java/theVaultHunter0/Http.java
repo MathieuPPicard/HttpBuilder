@@ -64,7 +64,7 @@ public class Http {
         }
 
         //Build the header
-        Map<String,String> headerMap = new HashMap<>();
+        HashMap<String,String> headerMap = new HashMap<>();
         int i = 1;
         while(i < tokens.length && !tokens[i].isEmpty()){
            String[] headerPart = tokens[i].split(":",2);
@@ -86,7 +86,7 @@ public class Http {
     }
 
     public Http fromBytes(byte[] bytes){
-        String newHttp = new String(bytes, StandardCharsets.UTF_8);
+        String newHttp = new String(bytes, StandardCharsets.US_ASCII);
         return fromString(newHttp);
     }
 

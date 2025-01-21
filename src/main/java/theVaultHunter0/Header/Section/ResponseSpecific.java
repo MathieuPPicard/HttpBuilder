@@ -61,4 +61,40 @@ public class ResponseSpecific {
     public String getWwwAuthenticate() {
         return wwwAuthenticate;
     }
+
+    public void setAcceptRanges(String acceptRanges) {
+        this.acceptRanges = acceptRanges;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public void setEtag(String etag) {
+        this.etag = etag;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setProxyAuthenticate(String proxyAuthenticate) {
+        this.proxyAuthenticate = proxyAuthenticate;
+    }
+
+    public void setRetryAfter(String retryAfter) {
+        this.retryAfter = retryAfter;
+    }
+
+    public void setServer(String server) {
+        this.server = server;
+    }
+
+    public void setVary(String vary) {
+        this.vary = vary;
+    }
+
+    public void setWwwAuthenticate(String wwwAuthenticate) {
+        this.wwwAuthenticate = wwwAuthenticate;
+    }
 }

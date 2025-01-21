@@ -108,4 +108,72 @@ public class SecurityHeader {
     public String getAccesControlMaxAge() {
         return accesControlMaxAge;
     }
+
+    public void setContentSecurityPolicy(String contentSecurityPolicy) {
+        this.contentSecurityPolicy = contentSecurityPolicy;
+    }
+
+    public void setStrictTransportSecurity(String strictTransportSecurity) {
+        this.strictTransportSecurity = strictTransportSecurity;
+    }
+
+    public void setxContentTypeOptions(String xContentTypeOptions) {
+        this.xContentTypeOptions = xContentTypeOptions;
+    }
+
+    public void setxFrameOptions(String xFrameOptions) {
+        this.xFrameOptions = xFrameOptions;
+    }
+
+    public void setxXssProtection(String xXssProtection) {
+        this.xXssProtection = xXssProtection;
+    }
+
+    public void setSetCookie(String setCookie) {
+        this.setCookie = setCookie;
+    }
+
+    public void setCookie(String cookie) {
+        this.cookie = cookie;
+    }
+
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
+    }
+
+    public void setWwwAuthenticate(String wwwAuthenticate) {
+        this.wwwAuthenticate = wwwAuthenticate;
+    }
+
+    public void setProxyAuthenticate(String proxyAuthenticate) {
+        this.proxyAuthenticate = proxyAuthenticate;
+    }
+
+    public void setProxyAuthorization(String proxyAuthorization) {
+        this.proxyAuthorization = proxyAuthorization;
+    }
+
+    public void setAccesControlAllowOrigin(String accesControlAllowOrigin) {
+        this.accesControlAllowOrigin = accesControlAllowOrigin;
+    }
+
+    public void setAccesControlAllowCredentials(String accesControlAllowCredentials) {
+        this.accesControlAllowCredentials = accesControlAllowCredentials;
+    }
+
+    public void setAccesContorlAllowHeader(String accesContorlAllowHeader) {
+        this.accesContorlAllowHeader = accesContorlAllowHeader;
+    }
+
+    public void setAccesControlAllowMethods(String accesControlAllowMethods) {
+        this.accesControlAllowMethods = accesControlAllowMethods;
+    }
+
+    public void setAccesControlExposeHeaders(String accesControlExposeHeaders) {
+        this.accesControlExposeHeaders = accesControlExposeHeaders;
+    }
+
+    public void setAccesControlMaxAge(String accesControlMaxAge) {
+        this.accesControlMaxAge = accesControlMaxAge;
+    }
 }

@@ -16,7 +16,7 @@ public class GeneralHeader {
     public GeneralHeader(String cacheControl, String connection, String date, String pragma, String trailer, String transferEncoding, String upgrade, String via, String warning) {
         this.cacheControl = cacheControl;
         this.connection = connection;
-        Date = date;
+        this.Date = date;
         this.pragma = pragma;
         this.trailer = trailer;
         this.transferEncoding = transferEncoding;
@@ -59,5 +59,41 @@ public class GeneralHeader {
 
     public String getWarning() {
         return warning;
+    }
+
+    public void setWarning(String warning) {
+        this.warning = warning;
+    }
+
+    public void setCacheControl(String cacheControl) {
+        this.cacheControl = cacheControl;
+    }
+
+    public void setConnection(String connection) {
+        this.connection = connection;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
+
+    public void setPragma(String pragma) {
+        this.pragma = pragma;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
+    }
+
+    public void setTransferEncoding(String transferEncoding) {
+        this.transferEncoding = transferEncoding;
+    }
+
+    public void setUpgrade(String upgrade) {
+        this.upgrade = upgrade;
+    }
+
+    public void setVia(String via) {
+        this.via = via;
     }
 }

@@ -75,4 +75,48 @@ public class EntityHeader extends Section {
     public String getLastModified() {
         return lastModified;
     }
+
+    public void setAllow(String allow) {
+        this.allow = allow;
+    }
+
+    public void setContentDisposition(String contentDisposition) {
+        this.contentDisposition = contentDisposition;
+    }
+
+    public void setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+    }
+
+    public void setContentLanguage(String contentLanguage) {
+        this.contentLanguage = contentLanguage;
+    }
+
+    public void setContentLength(String contentLength) {
+        this.contentLength = contentLength;
+    }
+
+    public void setContentLocation(String contentLocation) {
+        this.contentLocation = contentLocation;
+    }
+
+    public void setContentMD5(String contentMD5) {
+        this.contentMD5 = contentMD5;
+    }
+
+    public void setContentRange(String contentRange) {
+        this.contentRange = contentRange;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    public void setExpires(String expires) {
+        this.expires = expires;
+    }
+
+    public void setLastModified(String lastModified) {
+        this.lastModified = lastModified;
+    }
 }

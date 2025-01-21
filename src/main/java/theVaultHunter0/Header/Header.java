@@ -3,7 +3,7 @@ package theVaultHunter0.Header;
 import theVaultHunter0.Header.Section.*;
 
 import java.lang.reflect.Field;
-import java.util.Map;
+import java.util.HashMap;
 
 public class Header {
 
@@ -13,6 +13,10 @@ public class Header {
     private CustomHeader customHeader;
     private ResponseSpecific responseHeader;
     private RequestSpecific requestHeader;
+
+    public Header() {
+
+    }
 
     public Header(GeneralHeader generalHeader, EntityHeader entityHeader,
                   SecurityHeader securityHeader, CustomHeader customHeader,
@@ -47,7 +51,7 @@ public class Header {
         return result.toString();
     }
 
-    public static Header fromString(Map<String, String> map, boolean isRequest){
+    public static Header fromString(HashMap<String, String> map, boolean isRequest){
         CustomHeader custom = new CustomHeader(map);
         if(isRequest)
         {
@@ -62,23 +66,47 @@ public class Header {
         return customHeader;
     }
 
+    public void addCustomHeader() {
+        this.customHeader = new CustomHeader();
+    }
+
     public SecurityHeader getSecurityHeader() {
         return securityHeader;
+    }
+
+    public void addSecurityHeader(){
+        this.securityHeader = new SecurityHeader();
     }
 
     public EntityHeader getEntityHeader() {
         return entityHeader;
     }
 
+    public void addEntityHeader(){
+        this.entityHeader = new EntityHeader();
+    }
+
     public GeneralHeader getGeneralHeader() {
         return generalHeader;
+    }
+
+    public void addGeneralHeader(){
+        this.generalHeader = new GeneralHeader();
     }
 
     public ResponseSpecific getResponseHeader() {
         return responseHeader;
     }
 
+    public void addResponseSpecificHeader(){
+        this.responseHeader = new ResponseSpecific();
+    }
+
     public RequestSpecific getRequestHeader() {
         return requestHeader;
+    }
+
+    public void addRequestSpecificHeader(){
+        this.requestHeader = new RequestSpecific();
     }
 }

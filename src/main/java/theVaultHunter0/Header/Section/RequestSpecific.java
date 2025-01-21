@@ -114,4 +114,76 @@ public class RequestSpecific {
     public String getUpgradeInsecudeRequests() {
         return upgradeInsecudeRequests;
     }
+
+    public void setAccept(String accept) {
+        this.accept = accept;
+    }
+
+    public void setUpgradeInsecudeRequests(String upgradeInsecudeRequests) {
+        this.upgradeInsecudeRequests = upgradeInsecudeRequests;
+    }
+
+    public void setUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+    }
+
+    public void setTE(String TE) {
+        this.TE = TE;
+    }
+
+    public void setReferer(String referer) {
+        this.referer = referer;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public void setIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
+    }
+
+    public void setIfRange(String ifRange) {
+        this.ifRange = ifRange;
+    }
+
+    public void setIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+    }
+
+    public void setIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+    }
+
+    public void setIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public void setForwarded(String forwarded) {
+        this.forwarded = forwarded;
+    }
+
+    public void setExpect(String expect) {
+        this.expect = expect;
+    }
+
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
+    }
+
+    public void setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+    }
+
+    public void setAcceptEncoding(String acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
+    }
+
+    public void setAcceptCharset(String acceptCharset) {
+        this.acceptCharset = acceptCharset;
+    }
 }

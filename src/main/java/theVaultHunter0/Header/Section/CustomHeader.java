@@ -7,7 +7,9 @@ public class CustomHeader extends Section {
 
     private Map<String,String> map;
 
-    public CustomHeader(Map<String,String> map) {
+    public CustomHeader(){}
+
+    public CustomHeader(HashMap<String,String> map) {
         this.map = map;
     }
 
@@ -21,6 +23,10 @@ public class CustomHeader extends Section {
 
     public Map<String, String> getMap(){
         return map;
+    }
+
+    public void setMap(Map<String, String> map){
+        this.map = map;
     }
 
 }
