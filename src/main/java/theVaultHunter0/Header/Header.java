@@ -62,6 +62,23 @@ public class Header {
         }
     }
 
+    public boolean validateSection(String section) {
+        Section nsec;
+        switch (section.toLowerCase()) {
+            case "response" -> nsec = getResponseHeader();
+            case "general" -> nsec = getGeneralHeader();
+            case "entity" -> nsec = getEntityHeader();
+            case "security" -> nsec = getSecurityHeader();
+            case "custom" -> nsec = getCustomHeader();
+            case "request" -> nsec = getRequestHeader();
+            default -> {
+                return false;
+            }
+        };
+
+        return nsec != null;
+    }
+
     public CustomHeader getCustomHeader() {
         return customHeader;
     }

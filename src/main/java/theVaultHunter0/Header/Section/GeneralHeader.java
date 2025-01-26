@@ -1,36 +1,36 @@
 package theVaultHunter0.Header.Section;
 
-public class GeneralHeader {
-    private String cacheControl;
-    private String connection;
+public class GeneralHeader extends Section{
+    private String CacheControl;
+    private String Connection;
     private String Date;
-    private String pragma;
-    private String trailer;
-    private String transferEncoding;
-    private String upgrade;
-    private String via;
-    private String warning;
+    private String Pragma;
+    private String Trailer;
+    private String TransferEncoding;
+    private String Upgrade;
+    private String Via;
+    private String Warning;
 
     public GeneralHeader() {}
 
     public GeneralHeader(String cacheControl, String connection, String date, String pragma, String trailer, String transferEncoding, String upgrade, String via, String warning) {
-        this.cacheControl = cacheControl;
-        this.connection = connection;
+        this.CacheControl = cacheControl;
+        this.Connection = connection;
         this.Date = date;
-        this.pragma = pragma;
-        this.trailer = trailer;
-        this.transferEncoding = transferEncoding;
-        this.upgrade = upgrade;
-        this.via = via;
-        this.warning = warning;
+        this.Pragma = pragma;
+        this.Trailer = trailer;
+        this.TransferEncoding = transferEncoding;
+        this.Upgrade = upgrade;
+        this.Via = via;
+        this.Warning = warning;
     }
 
     public String getCacheControl() {
-        return cacheControl;
+        return CacheControl;
     }
 
     public String getConnection() {
-        return connection;
+        return Connection;
     }
 
     public String getDate() {
@@ -38,39 +38,39 @@ public class GeneralHeader {
     }
 
     public String getPragma() {
-        return pragma;
+        return Pragma;
     }
 
     public String getTrailer() {
-        return trailer;
+        return Trailer;
     }
 
     public String getTransferEncoding() {
-        return transferEncoding;
+        return TransferEncoding;
     }
 
     public String getUpgrade() {
-        return upgrade;
+        return Upgrade;
     }
 
     public String getVia() {
-        return via;
+        return Via;
     }
 
     public String getWarning() {
-        return warning;
+        return Warning;
     }
 
     public void setWarning(String warning) {
-        this.warning = warning;
+        this.Warning = warning;
     }
 
     public void setCacheControl(String cacheControl) {
-        this.cacheControl = cacheControl;
+        this.CacheControl = cacheControl;
     }
 
     public void setConnection(String connection) {
-        this.connection = connection;
+        this.Connection = connection;
     }
 
     public void setDate(String date) {
@@ -78,22 +78,22 @@ public class GeneralHeader {
     }
 
     public void setPragma(String pragma) {
-        this.pragma = pragma;
+        this.Pragma = pragma;
     }
 
     public void setTrailer(String trailer) {
-        this.trailer = trailer;
+        this.Trailer = trailer;
     }
 
     public void setTransferEncoding(String transferEncoding) {
-        this.transferEncoding = transferEncoding;
+        this.TransferEncoding = transferEncoding;
     }
 
     public void setUpgrade(String upgrade) {
-        this.upgrade = upgrade;
+        this.Upgrade = upgrade;
     }
 
     public void setVia(String via) {
-        this.via = via;
+        this.Via = via;
     }
 }

@@ -1,5 +1,6 @@
 package theVaultHunter0.Header.Section;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +22,14 @@ public class CustomHeader extends Section {
         return result;
     }
 
+    public boolean verifyParameterExist(String parameter){
+        return map.containsKey(parameter);
+    }
+
+    public void assignValueToParameter(String parameter, String value){
+        map.put(parameter,value);
+    }
+
     public Map<String, String> getMap(){
         return map;
     }
@@ -28,5 +37,4 @@ public class CustomHeader extends Section {
     public void setMap(Map<String, String> map){
         this.map = map;
     }
-
 }

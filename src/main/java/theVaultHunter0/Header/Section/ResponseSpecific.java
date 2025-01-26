@@ -1,100 +1,99 @@
 package theVaultHunter0.Header.Section;
 
-public class ResponseSpecific {
-
-    private String acceptRanges;
-    private String age;
-    private String etag;
-    private String location;
-    private String proxyAuthenticate;
-    private String retryAfter;
-    private String server;
-    private String vary;
-    private String wwwAuthenticate;
+public class ResponseSpecific extends Section {
+    private String AcceptRanges;
+    private String Age;
+    private String Etag;
+    private String Location;
+    private String ProxyAuthenticate;
+    private String RetryAfter;
+    private String Server;
+    private String Vary;
+    private String WWWAuthenticate;
 
     public ResponseSpecific() {}
 
     public ResponseSpecific(String acceptRanges, String age, String etag, String location, String proxyAuthenticate, String retryAfter, String server, String vary, String wwwAuthenticate) {
-        this.acceptRanges = acceptRanges;
-        this.age = age;
-        this.etag = etag;
-        this.location = location;
-        this.proxyAuthenticate = proxyAuthenticate;
-        this.retryAfter = retryAfter;
-        this.server = server;
-        this.vary = vary;
-        this.wwwAuthenticate = wwwAuthenticate;
+        this.AcceptRanges = acceptRanges;
+        this.Age = age;
+        this.Etag = etag;
+        this.Location = location;
+        this.ProxyAuthenticate = proxyAuthenticate;
+        this.RetryAfter = retryAfter;
+        this.Server = server;
+        this.Vary = vary;
+        this.WWWAuthenticate = wwwAuthenticate;
     }
 
     public String getAcceptRanges() {
-        return acceptRanges;
+        return AcceptRanges;
     }
 
     public String getAge() {
-        return age;
+        return Age;
     }
 
     public String getEtag() {
-        return etag;
+        return Etag;
     }
 
     public String getLocation() {
-        return location;
+        return Location;
     }
 
     public String getProxyAuthenticate() {
-        return proxyAuthenticate;
+        return ProxyAuthenticate;
     }
 
     public String getRetryAfter() {
-        return retryAfter;
+        return RetryAfter;
     }
 
     public String getServer() {
-        return server;
+        return Server;
     }
 
     public String getVary() {
-        return vary;
+        return Vary;
     }
 
-    public String getWwwAuthenticate() {
-        return wwwAuthenticate;
+    public String getWWWAuthenticate() {
+        return WWWAuthenticate;
     }
 
     public void setAcceptRanges(String acceptRanges) {
-        this.acceptRanges = acceptRanges;
+        this.AcceptRanges = acceptRanges;
     }
 
     public void setAge(String age) {
-        this.age = age;
+        this.Age = age;
     }
 
     public void setEtag(String etag) {
-        this.etag = etag;
+        this.Etag = etag;
     }
 
     public void setLocation(String location) {
-        this.location = location;
+        this.Location = location;
     }
 
     public void setProxyAuthenticate(String proxyAuthenticate) {
-        this.proxyAuthenticate = proxyAuthenticate;
+        this.ProxyAuthenticate = proxyAuthenticate;
     }
 
     public void setRetryAfter(String retryAfter) {
-        this.retryAfter = retryAfter;
+        this.RetryAfter = retryAfter;
     }
 
     public void setServer(String server) {
-        this.server = server;
+        this.Server = server;
     }
 
     public void setVary(String vary) {
-        this.vary = vary;
+        this.Vary = vary;
     }
 
-    public void setWwwAuthenticate(String wwwAuthenticate) {
-        this.wwwAuthenticate = wwwAuthenticate;
+    public void setWWWAuthenticate(String WWWAuthenticate) {
+        this.WWWAuthenticate = WWWAuthenticate;
     }
 }

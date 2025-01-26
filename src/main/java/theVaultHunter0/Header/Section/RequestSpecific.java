@@ -1,106 +1,106 @@
 package theVaultHunter0.Header.Section;
 
-public class RequestSpecific {
-    private String accept;
-    private String acceptCharset;
-    private String acceptEncoding;
-    private String acceptLanguage;
-    private String authorization;
-    private String expect;
-    private String forwarded;
-    private String host;
-    private String ifMatch;
-    private String ifModifiedSince;
-    private String ifNoneMatch;
-    private String ifRange;
-    private String ifUnmodifiedSince;
-    private String origin;
-    private String referer;
+public class RequestSpecific extends Section {
+    private String Accept;
+    private String AcceptCharset;
+    private String AcceptEncoding;
+    private String AcceptLanguage;
+    private String Authorization;
+    private String Expect;
+    private String Forwarded;
+    private String Host;
+    private String IfMatch;
+    private String IfModifiedSince;
+    private String IfNoneMatch;
+    private String IfRange;
+    private String IfUnmodifiedSince;
+    private String Origin;
+    private String Referer;
     private String TE;
-    private String userAgent;
-    private String upgradeInsecudeRequests;
+    private String UserAgent;
+    private String UpgradeInsecureRequests;
 
     public RequestSpecific(){}
 
     public RequestSpecific(String accept, String acceptCharset, String acceptEncoding, String acceptLanguage, String authorization, String expect, String forwarded, String host, String ifMatch, String ifModifiedSince, String ifNoneMatch, String ifRange, String ifUnmodifiedSince, String origin, String referer, String TE, String userAgent, String upgradeInsecudeRequests) {
-        this.accept = accept;
-        this.acceptCharset = acceptCharset;
-        this.acceptEncoding = acceptEncoding;
-        this.acceptLanguage = acceptLanguage;
-        this.authorization = authorization;
-        this.expect = expect;
-        this.forwarded = forwarded;
-        this.host = host;
-        this.ifMatch = ifMatch;
-        this.ifModifiedSince = ifModifiedSince;
-        this.ifNoneMatch = ifNoneMatch;
-        this.ifRange = ifRange;
-        this.ifUnmodifiedSince = ifUnmodifiedSince;
-        this.origin = origin;
-        this.referer = referer;
+        this.Accept = accept;
+        this.AcceptCharset = acceptCharset;
+        this.AcceptEncoding = acceptEncoding;
+        this.AcceptLanguage = acceptLanguage;
+        this.Authorization = authorization;
+        this.Expect = expect;
+        this.Forwarded = forwarded;
+        this.Host = host;
+        this.IfMatch = ifMatch;
+        this.IfModifiedSince = ifModifiedSince;
+        this.IfNoneMatch = ifNoneMatch;
+        this.IfRange = ifRange;
+        this.IfUnmodifiedSince = ifUnmodifiedSince;
+        this.Origin = origin;
+        this.Referer = referer;
         this.TE = TE;
-        this.userAgent = userAgent;
-        this.upgradeInsecudeRequests = upgradeInsecudeRequests;
+        this.UserAgent = userAgent;
+        this.UpgradeInsecureRequests = upgradeInsecudeRequests;
     }
 
     public String getAccept() {
-        return accept;
+        return Accept;
     }
 
     public String getAcceptCharset() {
-        return acceptCharset;
+        return AcceptCharset;
     }
 
     public String getAcceptEncoding() {
-        return acceptEncoding;
+        return AcceptEncoding;
     }
 
     public String getAcceptLanguage() {
-        return acceptLanguage;
+        return AcceptLanguage;
     }
 
     public String getAuthorization() {
-        return authorization;
+        return Authorization;
     }
 
     public String getExpect() {
-        return expect;
+        return Expect;
     }
 
     public String getForwarded() {
-        return forwarded;
+        return Forwarded;
     }
 
     public String getHost() {
-        return host;
+        return Host;
     }
 
     public String getIfMatch() {
-        return ifMatch;
+        return IfMatch;
     }
 
     public String getIfModifiedSince() {
-        return ifModifiedSince;
+        return IfModifiedSince;
     }
 
     public String getIfNoneMatch() {
-        return ifNoneMatch;
+        return IfNoneMatch;
     }
 
     public String getIfRange() {
-        return ifRange;
+        return IfRange;
     }
 
     public String getIfUnmodifiedSince() {
-        return ifUnmodifiedSince;
+        return IfUnmodifiedSince;
     }
 
     public String getOrigin() {
-        return origin;
+        return Origin;
     }
 
     public String getReferer() {
-        return referer;
+        return Referer;
     }
 
     public String getTE() {
@@ -108,23 +108,23 @@ public class RequestSpecific {
     }
 
     public String getUserAgent() {
-        return userAgent;
+        return UserAgent;
     }
 
-    public String getUpgradeInsecudeRequests() {
-        return upgradeInsecudeRequests;
+    public String getUpgradeInsecureRequests() {
+        return UpgradeInsecureRequests;
     }
 
     public void setAccept(String accept) {
-        this.accept = accept;
+        this.Accept = accept;
     }
 
-    public void setUpgradeInsecudeRequests(String upgradeInsecudeRequests) {
-        this.upgradeInsecudeRequests = upgradeInsecudeRequests;
+    public void setUpgradeInsecureRequests(String upgradeInsecureRequests) {
+        this.UpgradeInsecureRequests = upgradeInsecureRequests;
     }
 
     public void setUserAgent(String userAgent) {
-        this.userAgent = userAgent;
+        this.UserAgent = userAgent;
     }
 
     public void setTE(String TE) {
@@ -132,58 +132,58 @@ public class RequestSpecific {
     }
 
     public void setReferer(String referer) {
-        this.referer = referer;
+        this.Referer = referer;
     }
 
     public void setOrigin(String origin) {
-        this.origin = origin;
+        this.Origin = origin;
     }
 
     public void setIfUnmodifiedSince(String ifUnmodifiedSince) {
-        this.ifUnmodifiedSince = ifUnmodifiedSince;
+        this.IfUnmodifiedSince = ifUnmodifiedSince;
     }
 
     public void setIfRange(String ifRange) {
-        this.ifRange = ifRange;
+        this.IfRange = ifRange;
     }
 
     public void setIfNoneMatch(String ifNoneMatch) {
-        this.ifNoneMatch = ifNoneMatch;
+        this.IfNoneMatch = ifNoneMatch;
     }
 
     public void setIfModifiedSince(String ifModifiedSince) {
-        this.ifModifiedSince = ifModifiedSince;
+        this.IfModifiedSince = ifModifiedSince;
     }
 
     public void setIfMatch(String ifMatch) {
-        this.ifMatch = ifMatch;
+        this.IfMatch = ifMatch;
     }
 
     public void setHost(String host) {
-        this.host = host;
+        this.Host = host;
     }
 
     public void setForwarded(String forwarded) {
-        this.forwarded = forwarded;
+        this.Forwarded = forwarded;
     }
 
     public void setExpect(String expect) {
-        this.expect = expect;
+        this.Expect = expect;
     }
 
     public void setAuthorization(String authorization) {
-        this.authorization = authorization;
+        this.Authorization = authorization;
     }
 
     public void setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
+        this.AcceptLanguage = acceptLanguage;
     }
 
     public void setAcceptEncoding(String acceptEncoding) {
-        this.acceptEncoding = acceptEncoding;
+        this.AcceptEncoding = acceptEncoding;
     }
 
     public void setAcceptCharset(String acceptCharset) {
-        this.acceptCharset = acceptCharset;
+        this.AcceptCharset = acceptCharset;
     }
 }

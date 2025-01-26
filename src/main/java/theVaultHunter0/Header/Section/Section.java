@@ -20,4 +20,27 @@ public class Section {
         }
         return result.toString();
     }
+
+    public boolean verifyParameterExist(String parameter){
+        Class<?> type = this.getClass();
+        Field[] fields = type.getDeclaredFields();
+        for(Field field : fields){
+            if(field.getName().equals(parameter)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void assignValueToParameter(String parameter, String value) throws IllegalAccessException {
+        Class<?> type = this.getClass();
+        Field[] fields = type.getDeclaredFields();
+        for(Field field : fields){
+            if(field.getName().equals(parameter)){
+                field.setAccessible(true);
+                field.set(this, value);
+                return;
+            }
+        }
+    }
 }
