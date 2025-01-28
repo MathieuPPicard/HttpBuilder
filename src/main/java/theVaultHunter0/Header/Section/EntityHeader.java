@@ -1,19 +1,31 @@
 package theVaultHunter0.Header.Section;
 
+import theVaultHunter0.As;
 import theVaultHunter0.Header.Header;
 
 public class EntityHeader extends Section {
 
+    @As("allow")
     private String Allow;
+    @As("content-disposition")
     private String ContentDisposition;
+    @As("content-encoding")
     private String ContentEncoding;
+    @As("content-language")
     private String ContentLanguage;
+    @As("content-length")
     private String ContentLength;
+    @As("content-location")
     private String ContentLocation;
+    @As("content-md5")
     private String ContentMD5;
+    @As("content-range")
     private String ContentRange;
+    @As("content-type")
     private String ContentType;
+    @As("expires")
     private String Expires;
+    @As("last-modified")
     private String LastModified;
 
     public EntityHeader() {}

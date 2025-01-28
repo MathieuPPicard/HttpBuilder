@@ -1,22 +1,41 @@
 package theVaultHunter0.Header.Section;
 
+import theVaultHunter0.As;
+
 public class SecurityHeader extends Section {
+    @As("content-security-policy")
     private String ContentSecurityPolicy;
+    @As("strict-transport-security")
     private String StrictTransportSecurity;
+    @As("xcontent-type-options")
     private String XContentTypeOptions;
+    @As("xframe-options")
     private String XFrameOptions;
+    @As("xxsssprotection")
     private String XXssProtection;
+    @As("set-cookie")
     private String SetCookie;
+    @As("cookie")
     private String Cookie;
+    @As("authorization")
     private String Authorization;
+    @As("wwwauthenticate")
     private String WWWAuthenticate;
+    @As("proxy-authenticate")
     private String ProxyAuthenticate;
+    @As("proxy-authorization")
     private String ProxyAuthorization;
+    @As("access-control-allow-origin")
     private String AccessControlAllowOrigin;
+    @As("access-control-allow-credentials")
     private String AccessControlAllowCredentials;
+    @As("access-control-allow-header")
     private String AccessControlAllowHeader;
+    @As("access-control-allow-methods")
     private String AccessControlAllowMethods;
+    @As("access-control-expose-headers")
     private String AccessControlExposeHeaders;
+    @As("access-control-max-age")
     private String AccessControlMaxAge;
 
     public SecurityHeader() {}

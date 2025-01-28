@@ -1,33 +1,50 @@
 package theVaultHunter0.Header.Section;
 
+import theVaultHunter0.As;
+
 public class RequestSpecific extends Section {
+    @As("accept")
     private String Accept;
+    @As("accept-charset")
     private String AcceptCharset;
+    @As("accept-encoding")
     private String AcceptEncoding;
+    @As("accept-language")
     private String AcceptLanguage;
-    private String Authorization;
+    @As("Expect")
     private String Expect;
+    @As("fowarded")
     private String Forwarded;
+    @As("host")
     private String Host;
+    @As("if-match")
     private String IfMatch;
+    @As("if-modified-since")
     private String IfModifiedSince;
+    @As("if-none-match")
     private String IfNoneMatch;
+    @As("if-range")
     private String IfRange;
+    @As("if-unmodified-since")
     private String IfUnmodifiedSince;
+    @As("origin")
     private String Origin;
+    @As("referer")
     private String Referer;
+    @As("te")
     private String TE;
+    @As("user-agent")
     private String UserAgent;
+    @As("upgrade-insecure-requests")
     private String UpgradeInsecureRequests;
 
     public RequestSpecific(){}
 
-    public RequestSpecific(String accept, String acceptCharset, String acceptEncoding, String acceptLanguage, String authorization, String expect, String forwarded, String host, String ifMatch, String ifModifiedSince, String ifNoneMatch, String ifRange, String ifUnmodifiedSince, String origin, String referer, String TE, String userAgent, String upgradeInsecudeRequests) {
+    public RequestSpecific(String accept, String acceptCharset, String acceptEncoding, String acceptLanguage, String expect, String forwarded, String host, String ifMatch, String ifModifiedSince, String ifNoneMatch, String ifRange, String ifUnmodifiedSince, String origin, String referer, String TE, String userAgent, String upgradeInsecudeRequests) {
         this.Accept = accept;
         this.AcceptCharset = acceptCharset;
         this.AcceptEncoding = acceptEncoding;
         this.AcceptLanguage = acceptLanguage;
-        this.Authorization = authorization;
         this.Expect = expect;
         this.Forwarded = forwarded;
         this.Host = host;
@@ -57,10 +74,6 @@ public class RequestSpecific extends Section {
 
     public String getAcceptLanguage() {
         return AcceptLanguage;
-    }
-
-    public String getAuthorization() {
-        return Authorization;
     }
 
     public String getExpect() {
@@ -171,9 +184,6 @@ public class RequestSpecific extends Section {
         this.Expect = expect;
     }
 
-    public void setAuthorization(String authorization) {
-        this.Authorization = authorization;
-    }
 
     public void setAcceptLanguage(String acceptLanguage) {
         this.AcceptLanguage = acceptLanguage;

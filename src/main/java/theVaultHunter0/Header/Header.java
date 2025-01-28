@@ -1,12 +1,15 @@
 package theVaultHunter0.Header;
 
+import theVaultHunter0.As;
 import theVaultHunter0.Header.Section.*;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Header {
 
+    private static Map<String, String> parameterToSection = new HashMap<>();
     private GeneralHeader generalHeader;
     private EntityHeader entityHeader;
     private SecurityHeader securityHeader;
@@ -15,7 +18,7 @@ public class Header {
     private RequestSpecific requestHeader;
 
     public Header() {
-
+        initParameterToSection();
     }
 
     public Header(GeneralHeader generalHeader, EntityHeader entityHeader,
@@ -27,10 +30,12 @@ public class Header {
         this.customHeader = customHeader;
         this.responseHeader = responseHeader;
         this.requestHeader = requestHeader;
+        initParameterToSection();
     }
 
     public Header(CustomHeader customHeader) {
         this.customHeader = customHeader;
+        initParameterToSection();
     }
 
     public String toString(){
@@ -38,28 +43,38 @@ public class Header {
         Class<?> type = this.getClass();
         Field[] fields = type.getDeclaredFields();
         for(Field field : fields){
-            field.setAccessible(true);
-            try{
-                if(field.get(this) != null){
-                    result.append(field.get(this).toString());
+            if(!field.getName().equals("parameterToSection")){
+                field.setAccessible(true);
+                try{
+                    if(field.get(this) != null){
+                        result.append(field.get(this).toString());
+                    }
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
                 }
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
             }
-
         }
         return result.toString();
     }
 
     public static Header fromString(HashMap<String, String> map, boolean isRequest){
-        CustomHeader custom = new CustomHeader(map);
-        if(isRequest)
-        {
-            return new Header(custom);
+        Header result = new Header();
+        Map<String, String> parameterToSection = result.getParameterToSection();
+        for(Map.Entry<String, String> entry : map.entrySet()){
+            String key = entry.getKey();
+            String section = parameterToSection.get(key);
+            //
+            //Find a way to initialize section, verify if the section as already been initialised.
+            //
+            if(!(section == null)){
+                //entry need to go in its appropriate section
+            }
+            else{
+                //entry need to go into custom
+            }
         }
-        else{
-            return new Header(custom);
-        }
+
+        return new Header();
     }
 
     public boolean validateSection(String section) {
@@ -77,6 +92,29 @@ public class Header {
         };
 
         return nsec != null;
+    }
+
+    private void initParameterToSection(){
+        Map<String, String> result = new HashMap<>();
+        Class<?> type = this.getClass();
+        Field[] fields = type.getDeclaredFields();
+        for(Field field : fields){
+            field.setAccessible(true);
+            if(!field.getName().equals("parameterToSection") && !field.getName().equals("customHeader")){
+               Field[] SectionFields = field.getType().getDeclaredFields();
+               for(Field SectionField : SectionFields){
+                   SectionField.setAccessible(true);
+                   String fieldName = SectionField.getAnnotation(As.class).value();
+                   String section = field.getName();
+                   result.put(fieldName, section);
+               }
+            }
+        }
+        parameterToSection = result;
+    }
+
+    public Map<String, String> getParameterToSection(){
+        return parameterToSection;
     }
 
     public CustomHeader getCustomHeader() {

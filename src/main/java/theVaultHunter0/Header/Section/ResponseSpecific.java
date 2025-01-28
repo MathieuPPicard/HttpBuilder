@@ -1,19 +1,29 @@
 package theVaultHunter0.Header.Section;
 
+import theVaultHunter0.As;
+
 public class ResponseSpecific extends Section {
+    @As("accept-ranges")
     private String AcceptRanges;
+    @As("age")
     private String Age;
+    @As("e-tag")
     private String Etag;
+    @As("location")
     private String Location;
+    @As("proxy-authenticate")
     private String ProxyAuthenticate;
+    @As("retry-after")
     private String RetryAfter;
+    @As("server")
     private String Server;
+    @As("vary")
     private String Vary;
-    private String WWWAuthenticate;
+
 
     public ResponseSpecific() {}
 
-    public ResponseSpecific(String acceptRanges, String age, String etag, String location, String proxyAuthenticate, String retryAfter, String server, String vary, String wwwAuthenticate) {
+    public ResponseSpecific(String acceptRanges, String age, String etag, String location, String proxyAuthenticate, String retryAfter, String server, String vary) {
         this.AcceptRanges = acceptRanges;
         this.Age = age;
         this.Etag = etag;
@@ -22,7 +32,6 @@ public class ResponseSpecific extends Section {
         this.RetryAfter = retryAfter;
         this.Server = server;
         this.Vary = vary;
-        this.WWWAuthenticate = wwwAuthenticate;
     }
 
     public String getAcceptRanges() {
@@ -57,10 +66,6 @@ public class ResponseSpecific extends Section {
         return Vary;
     }
 
-    public String getWWWAuthenticate() {
-        return WWWAuthenticate;
-    }
-
     public void setAcceptRanges(String acceptRanges) {
         this.AcceptRanges = acceptRanges;
     }
@@ -91,9 +96,5 @@ public class ResponseSpecific extends Section {
 
     public void setVary(String vary) {
         this.Vary = vary;
-    }
-
-    public void setWWWAuthenticate(String WWWAuthenticate) {
-        this.WWWAuthenticate = WWWAuthenticate;
     }
 }

@@ -1,14 +1,25 @@
 package theVaultHunter0.Header.Section;
 
+import theVaultHunter0.As;
+
 public class GeneralHeader extends Section{
+    @As("cache-control")
     private String CacheControl;
+    @As("connection")
     private String Connection;
+    @As("date")
     private String Date;
+    @As("pragma")
     private String Pragma;
+    @As("trailer")
     private String Trailer;
+    @As("transfer-encoding")
     private String TransferEncoding;
+    @As("upgrade")
     private String Upgrade;
+    @As("via")
     private String Via;
+    @As("warning")
     private String Warning;
 
     public GeneralHeader() {}
