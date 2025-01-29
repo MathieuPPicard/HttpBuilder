@@ -8,6 +8,7 @@ import theVaultHunter0.Body.Body;
 import theVaultHunter0.StartLine.StartLineRequest;
 import theVaultHunter0.StartLine.StartLineResponse;
 
+import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class Http {
     public Http() {
     }
 
-    public static Http fromString(String string){
+    public static Http fromString(String string) throws IllegalAccessException, InvocationTargetException {
         boolean isRequest = false;      //Be used to initialise the right object (StartLine, Header)
 
         //Create tokens
@@ -71,7 +72,7 @@ public class Http {
            headerMap.put(headerPart[0],headerPart[1]);
            i++;
         }
-        Header header = Header.fromString(headerMap,isRequest);
+        Header header = Header.fromString(headerMap);
 
         //Build the body
         String bodyString = "";
@@ -85,7 +86,7 @@ public class Http {
         return new Http(startLine,header,body);
     }
 
-    public Http fromBytes(byte[] bytes){
+    public Http fromBytes(byte[] bytes) throws IllegalAccessException, InvocationTargetException {
         String newHttp = new String(bytes, StandardCharsets.US_ASCII);
         return fromString(newHttp);
     }
